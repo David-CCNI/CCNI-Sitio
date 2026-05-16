@@ -4,22 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CCNI – Centro Cristiano Nueva Imagen · Zapopan</title>
+<meta name="description" content="Centro Cristiano Nueva Imagen en Zapopan. Somos personas con dudas, miedos e inseguridades que creemos que seguir a Jesús es la mejor decisión que alguien puede tomar. Ven y descúbrelo.">
+<meta property="og:title" content="CCNI – Centro Cristiano Nueva Imagen · Zapopan">
+<meta property="og:description" content="Como tú, somos personas con dudas, miedos e inseguridades. Creemos que en Jesús hay una mejor forma de vivir. Visítanos los domingos a las 10:00 AM.">
+<meta property="og:type" content="website">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
-/* ── PALETA EXACTA DE LAS REFERENCIAS ── */
+/* ── PALETA ── */
 :root {
-  --indigo:      #1A325A;   /* Indigo Blue — texto, secciones oscuras */
-  --indigo-d:    #111F3A;   /* Indigo más profundo — footer, nav oscura */
-  --terra:       #964B36;   /* Terracota — acento principal */
-  --terra-s:     #B06048;   /* Terracota suave — hover */
-  --paja:        #C9AF80;   /* Natural Straw — acento dorado, detalles */
-  --crema:       #EDE9DF;   /* Creamy White — fondo base */
-  --crema-d:     #E0D9CC;   /* Crema más oscura — secciones alternas */
-  --blanco:      #FAF8F4;   /* Blanco cálido — bloques limpios */
-  --carbon:      #1C1410;   /* Texto — café muy oscuro, nunca negro puro */
-  --gris:        #7A6E62;   /* Texto secundario */
-  --linea:       #D4CCBE;   /* Separadores */
+  --indigo:   #1A325A;
+  --indigo-d: #111F3A;
+  --terra:    #964B36;
+  --paja:     #C9AF80;
+  --crema:    #EDE9DF;
+  --crema-d:  #E0D9CC;
+  --blanco:   #FAF8F4;
+  --carbon:   #1C1410;
+  --gris:     #7A6E62;
+  --linea:    #D4CCBE;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -67,7 +70,9 @@ a { text-decoration: none; }
   background: rgba(237,233,223,0.97);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--linea);
+  transition: box-shadow .3s;
 }
+.nav.scrolled { box-shadow: 0 2px 24px rgba(26,50,90,0.08); }
 .nav-logo { display: flex; flex-direction: column; line-height: 1; }
 .nav-logo .n1 {
   font-family: 'Cormorant Garamond', serif;
@@ -83,8 +88,15 @@ a { text-decoration: none; }
 .nav-links a {
   font-size: 0.78rem; font-weight: 500;
   letter-spacing: 0.03em; color: var(--gris); transition: color .2s;
+  position: relative; padding-bottom: 2px;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+  height: 1px; background: var(--terra);
+  transform: scaleX(0); transition: transform .2s;
 }
 .nav-links a:hover { color: var(--terra); }
+.nav-links a:hover::after { transform: scaleX(1); }
 .nav-right { display: flex; align-items: center; gap: 16px; }
 .nav-cta {
   background: var(--indigo); color: var(--crema);
@@ -104,7 +116,44 @@ a { text-decoration: none; }
   display: none; flex-direction: column; gap: 5px;
   background: none; border: none; cursor: pointer; padding: 4px;
 }
-.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--indigo); }
+.hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--indigo); transition: all .3s;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0; z-index: 299;
+  background: rgba(237,233,223,0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--linea);
+  padding: 24px 28px 32px;
+  flex-direction: column; gap: 0;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all .25s ease;
+}
+.mobile-menu.open {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+.mobile-menu a {
+  font-size: 1rem; font-weight: 500; color: var(--carbon);
+  padding: 14px 0; border-bottom: 1px solid var(--linea);
+  letter-spacing: 0.02em;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--terra); }
+.mobile-menu .mobile-cta {
+  margin-top: 20px;
+  background: var(--indigo); color: var(--crema);
+  padding: 14px 22px; border-radius: 3px;
+  font-size: 0.84rem; font-weight: 600;
+  text-align: center; letter-spacing: 0.04em;
+  border-bottom: none !important;
+}
 
 /* ── HERO ── */
 .hero {
@@ -136,13 +185,6 @@ a { text-decoration: none; }
   padding: 80px 60px 80px 56px;
   background: var(--crema);
 }
-.hero-eyebrow {
-  font-size: 0.66rem; font-weight: 600;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--paja); margin-bottom: 30px;
-  display: flex; align-items: center; gap: 10px;
-}
-.hero-eyebrow::before { content: ''; display: block; width: 30px; height: 1px; background: currentColor; }
 .hero-titulo {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(3rem, 4.8vw, 5rem);
@@ -162,18 +204,18 @@ a { text-decoration: none; }
   background: var(--indigo); color: var(--crema);
   padding: 15px 26px; border-radius: 3px;
   font-size: 0.83rem; font-weight: 600; letter-spacing: 0.04em;
-  max-width: 310px; transition: background .2s;
+  max-width: 310px; transition: background .2s, transform .15s;
 }
-.btn-indigo:hover { background: var(--indigo-d); }
+.btn-indigo:hover { background: var(--indigo-d); transform: translateY(-1px); }
 
 .btn-terra {
   display: inline-flex; align-items: center; justify-content: space-between;
   background: var(--terra); color: var(--blanco);
   padding: 15px 26px; border-radius: 3px;
   font-size: 0.83rem; font-weight: 600; letter-spacing: 0.04em;
-  max-width: 310px; transition: background .2s;
+  max-width: 310px; transition: background .2s, transform .15s;
 }
-.btn-terra:hover { background: #7A3824; }
+.btn-terra:hover { background: #7A3824; transform: translateY(-1px); }
 
 .btn-texto {
   display: inline-flex; align-items: center; gap: 10px;
@@ -446,7 +488,7 @@ a { text-decoration: none; }
 }
 .blog-card .blog-leer:hover { gap: 12px; }
 
-/* ── MISIONES (terra) ── */
+/* ── MISIONES ── */
 .s-terra .tag { color: var(--crema-d); }
 .s-terra .titulo { color: var(--blanco); }
 .s-terra .titulo em { color: var(--paja); }
@@ -466,6 +508,7 @@ a { text-decoration: none; }
   display: grid; grid-template-columns: 72px 1fr auto;
   gap: 28px; align-items: center;
   padding: 28px 0; border-bottom: 1px solid var(--linea);
+  transition: background .2s;
 }
 .evento:first-child { border-top: 1px solid var(--linea); }
 .evento-fecha { text-align: center; }
@@ -506,7 +549,7 @@ a { text-decoration: none; }
 }
 .btn-borde-indigo:hover { background: rgba(26,50,90,0.08); }
 
-/* ── CONTACTO (indigo) ── */
+/* ── CONTACTO ── */
 .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 56px; align-items: start; }
 .s-indigo .titulo { color: var(--crema); }
 .contacto-datos { display: flex; flex-direction: column; gap: 24px; }
@@ -519,7 +562,7 @@ a { text-decoration: none; }
 }
 .dato-row span, .dato-row a { font-size: 0.92rem; color: rgba(237,233,223,0.8); }
 .dato-row a:hover { color: var(--paja); }
-.mapa { margin-top: 32px; height: 220px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
+.mapa { margin-top: 32px; height: 260px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
 .formulario { background: var(--crema); border-radius: 4px; padding: 36px; }
 .formulario h3 {
   font-family: 'Cormorant Garamond', serif;
@@ -592,7 +635,19 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
   .hero-titulo { font-size: 2.8rem; }
   .s { padding: 80px 24px; }
   .cta-central { padding: 80px 24px; }
-  .realidad-grid { grid-template-columns: 1fr 1fr; }
+  /* Pensamientos en responsivo: 2 columnas con tarjetas más compactas */
+  .pensamientos { grid-template-columns: 1fr 1fr; }
+  .pensamiento {
+    padding: 28px 24px 32px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .pensamiento:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06) !important; }
+  .pensamiento:nth-child(4),
+  .pensamiento:nth-child(5),
+  .pensamiento:nth-child(6) { border-top: none; }
+  .pensamiento-comilla { font-size: 3rem; margin-bottom: 14px; }
+  .pensamiento-voz { font-size: 1.05rem; }
   .puente { grid-template-columns: 1fr; }
   .puente-comunidad { border-left: none; border-top: 1px solid rgba(255,255,255,0.07); }
   .blog-intro { grid-template-columns: 1fr; gap: 20px; }
@@ -603,29 +658,65 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
   .esp-foto-a { aspect-ratio: 3/2; }
   .enc-grid { grid-template-columns: 1fr; }
   .primera-foto { aspect-ratio: 3/2; position: static; }
-  .mensajes-grid { grid-template-columns: 1fr 1fr; }
   .misiones-foto { height: 300px; }
   .historia-foto { aspect-ratio: 3/2; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .evento { grid-template-columns: 60px 1fr; }
   .evento-badge { display: none; }
+  .hero-data { gap: 24px; flex-wrap: wrap; }
 }
+
 @media (max-width: 600px) {
-  .realidad-grid, .mensajes-grid, .enc-grid, .footer-grid { grid-template-columns: 1fr; }
-  .pensamiento { border-right: none !important; border-top: 1px solid rgba(255,255,255,0.06) !important; padding: 32px 24px; }
-  .pensamiento:first-child { border-top: none !important; }
-  .puente-jesus, .puente-comunidad { padding: 40px 24px; }
-  .blog-grid { grid-template-columns: 1fr; }
+  /* Pensamientos en móvil: 1 columna con diseño horizontal compacto */
+  .pensamientos { grid-template-columns: 1fr; gap: 0; }
+  .pensamiento {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 16px;
+    padding: 20px 20px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    border-top: none !important;
+    align-items: start;
+  }
+  .pensamiento::before { width: 100%; height: 2px; bottom: auto; right: 0; transform: scaleX(0); transform-origin: left; }
+  .pensamiento:hover::before { transform: scaleX(1); }
+  .pensamiento-comilla {
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 0;
+    grid-row: 1;
+    grid-column: 1;
+    opacity: 0.3;
+    padding-top: 2px;
+  }
+  .pensamiento-voz {
+    font-size: 0.97rem;
+    grid-row: 1;
+    grid-column: 2;
+    margin-bottom: 8px;
+  }
+  .pensamiento-eco {
+    font-size: 0.75rem;
+    grid-row: 2;
+    grid-column: 2;
+    line-height: 1.6;
+  }
+  .footer-grid, .enc-grid, .blog-grid { grid-template-columns: 1fr; }
+  .blog-card-grande { grid-column: auto; }
   .cta-btns { flex-direction: column; align-items: center; }
   .hero-titulo { font-size: 2.4rem; }
   .titulo { font-size: 2rem; }
+  .puente-jesus, .puente-comunidad { padding: 36px 24px; }
+  .hero-data { gap: 20px; }
+  .hero-data-item .v { font-size: 0.82rem; }
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" id="nav">
   <a href="#inicio" class="nav-logo">
     <span class="n1">CCNI</span>
     <span class="n2">Centro Cristiano Nueva Imagen</span>
@@ -638,13 +729,24 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     <li><a href="#visitanos">Visítanos</a></li>
   </ul>
   <div class="nav-right">
-    <a href="https://wa.me/523310000000" class="nav-wa" target="_blank">💬</a>
+    <a href="https://wa.me/523310000000" class="nav-wa" target="_blank" aria-label="WhatsApp">💬</a>
     <a href="#primera" class="nav-cta">Planear mi visita</a>
   </div>
-  <button class="hamburger" aria-label="Menú">
+  <button class="hamburger" id="hamburger" aria-label="Menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#primera" onclick="closeMobileMenu()">Primera vez</a>
+  <a href="#historia" onclick="closeMobileMenu()">Quiénes somos</a>
+  <a href="#mensajes" onclick="closeMobileMenu()">Mensajes</a>
+  <a href="#misiones" onclick="closeMobileMenu()">Misiones</a>
+  <a href="#visitanos" onclick="closeMobileMenu()">Visítanos</a>
+  <a href="https://wa.me/523310000000" target="_blank" onclick="closeMobileMenu()">💬 WhatsApp</a>
+  <a href="#primera" class="mobile-cta" onclick="closeMobileMenu()">Planear mi primera visita →</a>
+</div>
 
 <!-- HERO -->
 <section id="inicio" class="hero">
@@ -662,9 +764,7 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
       En Jesús hay<br>una <em>mejor forma</em><br>de vivir.
     </h1>
     <p class="hero-cuerpo">
-      Como tú, somos personas con dudas, errores, miedos e inseguridades, 
-      pero creemos que seguir a Jesús mejora nuestras vidas. 
-      Acompáñanos y descúbrelo tú mismo.
+      Como tú, somos personas con dudas, miedos e inseguridades, pero creemos que seguir a Jesús es la mejor decisión que alguien puede tomar. Acompáñanos y descúbrelo tú mismo.
     </p>
     <div class="hero-btns">
       <a href="#primera" class="btn-indigo">Planear mi primera visita →</a>
@@ -672,8 +772,16 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     </div>
     <div class="hero-data">
       <div class="hero-data-item"><div class="l">Cuándo</div><div class="v">Domingos · 10:00 AM</div></div>
-      <div class="hero-data-item"><div class="l">Dónde</div><div class="v">Aud. B. Juárez, Zapopan</div></div>
-      <div class="hero-data-item"><div class="l">Entrada</div><div class="v">Libre siempre</div></div>
+      <div class="hero-data-item">
+        <div class="l">Dónde</div>
+        <div class="v" style="display:flex;flex-direction:column;gap:6px">
+          <span>C. Ameca 1768, Benito Juárez, Zapopan</span>
+          <div style="display:flex;gap:10px;margin-top:2px">
+            <a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" style="font-size:0.68rem;font-weight:600;letter-spacing:0.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px">📍 Google Maps</a>
+            <a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" style="font-size:0.68rem;font-weight:600;letter-spacing:0.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px">🗺 Waze</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -909,20 +1017,24 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     <div class="contacto-grid">
       <div>
         <div class="contacto-datos">
-          <div class="dato-row"><span class="ico">📍</span><div><strong>Dirección</strong><span>Col. Auditorio Benito Juárez, Zapopan, Jalisco</span></div></div>
+          <div class="dato-row"><span class="ico">📍</span><div><strong>Dirección</strong><span>C. Ameca 1768, Benito Juárez, 45199 Zapopan, Jal.</span><div style="display:flex;gap:12px;margin-top:8px"><a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" style="font-size:0.72rem;font-weight:600;color:var(--paja);letter-spacing:0.05em">📍 Google Maps →</a><a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" style="font-size:0.72rem;font-weight:600;color:var(--paja);letter-spacing:0.05em">🗺 Waze →</a></div></div></div>
           <div class="dato-row"><span class="ico">🕙</span><div><strong>Reunión dominical</strong><span>Domingos · 10:00 AM</span></div></div>
           <div class="dato-row"><span class="ico">💬</span><div><strong>WhatsApp</strong><a href="https://wa.me/523310000000" target="_blank">+52 33 1000-0000</a></div></div>
           <div class="dato-row"><span class="ico">📱</span><div><strong>Redes sociales</strong><span>@ccni.zapopan</span></div></div>
         </div>
         <div class="mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.8!2d-103.3942!3d20.6914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAuditorio+Benito+Juarez+Zapopan!5e0!3m2!1ses!2smx!4v1" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.2!2d-103.3383356!3d20.7322855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b100182b9645%3A0xa88aefb08e865055!2sCENTRO%20CRISTIANO%20NUEVA%20IMAGEN!5e0!3m2!1ses!2smx!4v1"
+            width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
       <div class="formulario">
         <h3>¿Tienes una pregunta?</h3>
         <p class="sub">Escríbenos. Con gusto te contestamos y te ayudamos a planear tu visita.</p>
-        <div class="campo"><input type="text" placeholder="Tu nombre"></div>
-        <div class="campo"><input type="text" placeholder="Tu WhatsApp"></div>
+        <div class="campo"><input type="text" placeholder="Tu nombre" autocomplete="name"></div>
+        <div class="campo"><input type="tel" placeholder="Tu WhatsApp" autocomplete="tel"></div>
         <div class="campo"><textarea placeholder="Tu pregunta o mensaje..."></textarea></div>
         <button class="campo-submit">Enviar mensaje</button>
       </div>
@@ -939,7 +1051,7 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     </div>
     <div class="footer-col"><h4>Explorar</h4><ul><li><a href="#primera">Primera Vez</a></li><li><a href="#mensajes">Mensajes</a></li><li><a href="#misiones">Misiones</a></li><li><a href="#eventos">Eventos</a></li></ul></div>
     <div class="footer-col"><h4>La iglesia</h4><ul><li><a href="#historia">Nuestra historia</a></li><li><a href="#historia">Qué creemos</a></li><li><a href="#visitanos">Visítanos</a></li></ul></div>
-    <div class="footer-col"><h4>Conecta</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li></ul></div>
+    <div class="footer-col"><h4>Conecta</h4><ul><li><a href="https://wa.me/523310000000" target="_blank">WhatsApp</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li></ul></div>
   </div>
   <div class="footer-base">
     <p>© 2025 Centro Cristiano Nueva Imagen · Zapopan, Jalisco</p>
@@ -947,7 +1059,35 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
   </div>
 </footer>
 
-<a href="https://wa.me/523310000000" class="wa" target="_blank" title="Hablar por WhatsApp">💬</a>
+<a href="https://wa.me/523310000000" class="wa" target="_blank" title="Hablar por WhatsApp" aria-label="WhatsApp">💬</a>
 
+<script>
+// Nav scroll shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Mobile menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+});
+
+function closeMobileMenu() {
+  menuOpen = false;
+  mobileMenu.classList.remove('open');
+}
+
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+  if (menuOpen && !hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+    closeMobileMenu();
+  }
+});
+</script>
 </body>
 </html>
