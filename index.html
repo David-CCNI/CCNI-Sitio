@@ -3,721 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CCNI – Centro Cristiano Nueva Imagen · Zapopan</title>
-<meta name="description" content="Centro Cristiano Nueva Imagen en Zapopan. Somos personas con dudas, miedos e inseguridades que creemos que seguir a Jesús es la mejor decisión que alguien puede tomar. Ven y descúbrelo.">
-<meta property="og:title" content="CCNI – Centro Cristiano Nueva Imagen · Zapopan">
-<meta property="og:description" content="Como tú, somos personas con dudas, miedos e inseguridades. Creemos que en Jesús hay una mejor forma de vivir. Visítanos los domingos a las 10:00 AM.">
+<title>Iglesia Cristiana en Zapopan Jalisco | CCNI – Centro Cristiano Nueva Imagen</title>
+<meta name="description" content="Iglesia cristiana en Zapopan, Jalisco. Domingos 11:00 AM en Col. Benito Juárez. Un lugar donde llegas como eres. Somos personas reales aprendiendo a seguir a Jesús juntos.">
+<meta name="keywords" content="iglesia cristiana Zapopan, iglesia bautista Zapopan Jalisco, iglesia evangelica Zapopan, iglesia Benito Juárez Zapopan, Centro Cristiano Nueva Imagen, CCNI Zapopan, iglesia cerca de mi Zapopan, iglesia familiar Zapopan">
+<meta property="og:title" content="CCNI – Iglesia Cristiana en Zapopan, Jalisco">
+<meta property="og:description" content="Como tú, somos personas con dudas, miedos e inseguridades. Creemos que en Jesús hay una mejor forma de vivir. Visítanos los domingos a las 11:00 AM en Zapopan.">
 <meta property="og:type" content="website">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="MX-JAL">
+<meta name="geo.placename" content="Zapopan, Jalisco">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Church",
+  "name":"Centro Cristiano Nueva Imagen",
+  "alternateName":"CCNI Zapopan",
+  "description":"Iglesia cristiana bautista en Zapopan, Jalisco. Un lugar donde llegas como eres.",
+  "url":"https://ccni-zapopan.netlify.app",
+  "telephone":"+523315999639",
+  "address":{"@type":"PostalAddress","streetAddress":"C. Ameca 1768","addressLocality":"Zapopan","addressRegion":"Jalisco","postalCode":"45199","addressCountry":"MX"},
+  "geo":{"@type":"GeoCoordinates","latitude":20.7322855,"longitude":-103.3383356},
+  "openingHours":"Su 11:00-13:00",
+  "sameAs":["https://wa.me/523315999639"]
+}
+</script>
 <style>
+:root{--indigo:#1A325A;--indigo-d:#111F3A;--terra:#964B36;--paja:#C9AF80;--crema:#EDE9DF;--crema-d:#E0D9CC;--blanco:#FAF8F4;--carbon:#1C1410;--gris:#7A6E62;--linea:#D4CCBE}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--crema);color:var(--carbon);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+.container{max-width:1080px;margin:0 auto}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:20px}
+.tag::before{content:'';display:block;width:26px;height:1px;background:currentColor}
+.titulo{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,3.6vw,3.8rem);font-weight:500;line-height:1.08;letter-spacing:-.01em;color:var(--carbon);margin-bottom:22px}
+.titulo em{font-style:italic;color:var(--terra)}
+.cuerpo{font-size:.96rem;line-height:1.84;color:var(--gris);max-width:500px}
 
-/* ── PALETA ── */
-:root {
-  --indigo:   #1A325A;
-  --indigo-d: #111F3A;
-  --terra:    #964B36;
-  --paja:     #C9AF80;
-  --crema:    #EDE9DF;
-  --crema-d:  #E0D9CC;
-  --blanco:   #FAF8F4;
-  --carbon:   #1C1410;
-  --gris:     #7A6E62;
-  --linea:    #D4CCBE;
-}
+/* ── BOTONES: ANIMACIÓN CONTINUA ── */
+@keyframes breathe{0%,100%{transform:scale(1);box-shadow:0 4px 12px rgba(26,50,90,.10)}50%{transform:scale(1.04);box-shadow:0 8px 24px rgba(26,50,90,.18)}}
+@keyframes breathe-soft{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--crema);
-  color: var(--carbon);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-img { display: block; max-width: 100%; }
-a { text-decoration: none; }
-.container { max-width: 1080px; margin: 0 auto; }
+/* Botones que respiran solos */
+.btn-indigo,.btn-terra,.btn-crema,.btn-indigo-s,.campo-submit{animation:breathe 3s ease-in-out infinite}
+.btn-terra{animation-delay:.4s}
+.btn-crema{animation-delay:.8s}
+.btn-indigo-s{animation-delay:.2s}
+.campo-submit{animation-delay:.3s}
 
-/* ── TIPOGRAFÍA ── */
-.tag {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.66rem; font-weight: 600;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--terra); margin-bottom: 20px;
-}
-.tag::before { content: ''; display: block; width: 26px; height: 1px; background: currentColor; }
+/* Botones que NO respiran solos (solo hover) */
+.btn-texto,.btn-borde-indigo,.btn-ghost-crema{transition:transform .25s cubic-bezier(.34,1.56,.64,1),gap .2s,color .2s}
+.btn-texto:hover{transform:scale(1.03)}
+.btn-borde-indigo:hover{transform:scale(1.04);box-shadow:0 8px 20px rgba(26,50,90,.15)}
+.btn-ghost-crema:hover{transform:scale(1.03);color:var(--crema)}
 
-.titulo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 3.6vw, 3.8rem);
-  font-weight: 500; line-height: 1.08;
-  letter-spacing: -0.01em; color: var(--carbon);
-  margin-bottom: 22px;
-}
-.titulo em { font-style: italic; color: var(--terra); }
+/* Hover detiene animación y hace zoom */
+.btn-indigo:hover,.btn-terra:hover,.btn-crema:hover,.btn-indigo-s:hover{animation:none;transform:scale(1.06);box-shadow:0 10px 28px rgba(26,50,90,.2);transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.campo-submit:hover{animation:none;transform:scale(1.02);transition:transform .2s}
 
-.cuerpo {
-  font-size: 0.96rem; line-height: 1.84;
-  color: var(--gris); max-width: 500px;
-}
+/* Estilos base de botones */
+.btn-indigo{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--indigo);color:var(--crema);padding:15px 28px;border-radius:3px;font-size:.83rem;font-weight:600;letter-spacing:.04em;width:fit-content}
+.btn-terra{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--terra);color:var(--blanco);padding:15px 28px;border-radius:3px;font-size:.83rem;font-weight:600;letter-spacing:.04em;width:fit-content}
+.btn-texto{display:inline-flex;align-items:center;gap:10px;font-size:.83rem;font-weight:500;color:var(--indigo);letter-spacing:.03em}
+.btn-crema{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--crema);color:var(--indigo-d);padding:14px 24px;border-radius:3px;font-size:.82rem;font-weight:700;letter-spacing:.04em;width:fit-content}
+.btn-indigo-s{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--indigo);color:var(--crema);padding:15px 36px;border-radius:3px;font-size:.84rem;font-weight:600;letter-spacing:.04em;min-width:200px}
+.btn-borde-indigo{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:transparent;color:var(--indigo);padding:15px 36px;border-radius:3px;font-size:.84rem;font-weight:600;letter-spacing:.04em;border:1.5px solid var(--indigo);min-width:200px}
+.btn-ghost-crema{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:500;color:rgba(237,233,223,.5);letter-spacing:.03em}
 
 /* ── NAV ── */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-  height: 64px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 52px;
-  background: rgba(237,233,223,0.97);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--linea);
-  transition: box-shadow .3s;
-}
-.nav.scrolled { box-shadow: 0 2px 24px rgba(26,50,90,0.08); }
-.nav-logo { display: flex; flex-direction: column; line-height: 1; }
-.nav-logo .n1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; font-weight: 600;
-  letter-spacing: 0.06em; color: var(--indigo);
-}
-.nav-logo .n2 {
-  font-size: 0.57rem; font-weight: 500;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gris); margin-top: 3px;
-}
-.nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a {
-  font-size: 0.78rem; font-weight: 500;
-  letter-spacing: 0.03em; color: var(--gris); transition: color .2s;
-  position: relative; padding-bottom: 2px;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
-  height: 1px; background: var(--terra);
-  transform: scaleX(0); transition: transform .2s;
-}
-.nav-links a:hover { color: var(--terra); }
-.nav-links a:hover::after { transform: scaleX(1); }
-.nav-right { display: flex; align-items: center; gap: 16px; }
-.nav-cta {
-  background: var(--indigo); color: var(--crema);
-  padding: 9px 22px; border-radius: 100px;
-  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em;
-  transition: background .2s;
-}
-.nav-cta:hover { background: var(--indigo-d); }
-.nav-wa {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: #25D366; color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.9rem; transition: transform .2s;
-}
-.nav-wa:hover { transform: scale(1.1); }
-.hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: pointer; padding: 4px;
-}
-.hamburger span {
-  display: block; width: 22px; height: 1.5px;
-  background: var(--indigo); transition: all .3s;
-}
-
-/* Mobile menu */
-.mobile-menu {
-  display: none;
-  position: fixed; top: 64px; left: 0; right: 0; z-index: 299;
-  background: rgba(237,233,223,0.98);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--linea);
-  padding: 24px 28px 32px;
-  flex-direction: column; gap: 0;
-  transform: translateY(-10px);
-  opacity: 0;
-  transition: all .25s ease;
-}
-.mobile-menu.open {
-  display: flex;
-  transform: translateY(0);
-  opacity: 1;
-}
-.mobile-menu a {
-  font-size: 1rem; font-weight: 500; color: var(--carbon);
-  padding: 14px 0; border-bottom: 1px solid var(--linea);
-  letter-spacing: 0.02em;
-}
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu a:hover { color: var(--terra); }
-.mobile-menu .mobile-cta {
-  margin-top: 20px;
-  background: var(--indigo); color: var(--crema);
-  padding: 14px 22px; border-radius: 3px;
-  font-size: 0.84rem; font-weight: 600;
-  text-align: center; letter-spacing: 0.04em;
-  border-bottom: none !important;
-}
+.nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 52px;background:rgba(237,233,223,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--linea);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 24px rgba(26,50,90,.08)}
+.nav-logo{display:flex;flex-direction:column;line-height:1}
+.nav-logo .n1{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;letter-spacing:.06em;color:var(--indigo)}
+.nav-logo .n2{font-size:.57rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);margin-top:3px}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-size:.78rem;font-weight:500;letter-spacing:.03em;color:var(--gris);transition:color .2s;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--terra);transform:scaleX(0);transition:transform .2s}
+.nav-links a:hover{color:var(--terra)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-cta{background:var(--indigo);color:var(--crema);padding:9px 22px;border-radius:100px;font-size:.76rem;font-weight:600;letter-spacing:.04em;transition:background .2s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.nav-cta:hover{background:var(--indigo-d);transform:scale(1.05)}
+.nav-wa{width:34px;height:34px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+.nav-wa:hover{transform:scale(1.1)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--indigo);transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;z-index:299;background:rgba(237,233,223,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--linea);padding:24px 28px 32px;flex-direction:column;gap:0;transform:translateY(-10px);opacity:0;transition:all .25s ease}
+.mobile-menu.open{display:flex;transform:translateY(0);opacity:1}
+.mobile-menu a{font-size:1rem;font-weight:500;color:var(--carbon);padding:14px 0;border-bottom:1px solid var(--linea);letter-spacing:.02em}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu a:hover{color:var(--terra)}
+.mobile-menu .mobile-cta{margin-top:20px;background:var(--indigo);color:var(--crema);padding:14px 22px;border-radius:3px;font-size:.84rem;font-weight:600;text-align:center;letter-spacing:.04em;border-bottom:none!important}
 
 /* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: grid; grid-template-columns: 55% 45%;
-  padding-top: 64px;
-}
-.hero-media {
-  position: relative; overflow: hidden;
-  background: var(--crema-d);
-}
-.hero-media img.principal {
-  width: 100%; height: 100%; object-fit: cover;
-  filter: brightness(0.88) saturate(0.9);
-}
-.hero-media img.flotante {
-  position: absolute; bottom: 36px; right: -18px;
-  width: 185px; height: 245px;
-  object-fit: cover; border-radius: 3px;
-  border: 5px solid var(--blanco);
-  box-shadow: 0 20px 56px rgba(26,50,90,0.18);
-}
-.hero-media-velo {
-  position: absolute; inset: 0;
-  background: linear-gradient(to right, rgba(26,50,90,0.06), transparent 55%);
-}
-.hero-texto {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 80px 60px 80px 56px;
-  background: var(--crema);
-}
-.hero-titulo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 4.8vw, 5rem);
-  font-weight: 500; line-height: 1.05;
-  letter-spacing: -0.02em; color: var(--carbon);
-  margin-bottom: 30px;
-}
-.hero-titulo em { font-style: italic; color: var(--terra); }
-.hero-cuerpo {
-  font-size: 1rem; line-height: 1.84;
-  color: var(--gris); margin-bottom: 44px; max-width: 375px;
-}
-.hero-btns { display: flex; flex-direction: column; gap: 14px; margin-bottom: 52px; }
-
-.btn-indigo {
-  display: inline-flex; align-items: center; justify-content: space-between;
-  background: var(--indigo); color: var(--crema);
-  padding: 15px 26px; border-radius: 3px;
-  font-size: 0.83rem; font-weight: 600; letter-spacing: 0.04em;
-  max-width: 310px; transition: background .2s, transform .15s;
-}
-.btn-indigo:hover { background: var(--indigo-d); transform: translateY(-1px); }
-
-.btn-terra {
-  display: inline-flex; align-items: center; justify-content: space-between;
-  background: var(--terra); color: var(--blanco);
-  padding: 15px 26px; border-radius: 3px;
-  font-size: 0.83rem; font-weight: 600; letter-spacing: 0.04em;
-  max-width: 310px; transition: background .2s, transform .15s;
-}
-.btn-terra:hover { background: #7A3824; transform: translateY(-1px); }
-
-.btn-texto {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.83rem; font-weight: 500; color: var(--indigo);
-  letter-spacing: 0.03em; transition: gap .2s;
-}
-.btn-texto:hover { gap: 16px; }
-
-.hero-data {
-  display: flex; gap: 36px;
-  padding-top: 32px; border-top: 1px solid var(--linea);
-}
-.hero-data-item .l {
-  font-size: 0.63rem; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris);
-}
-.hero-data-item .v {
-  font-size: 0.9rem; font-weight: 600; color: var(--carbon); margin-top: 5px;
-}
+.hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:64px}
+.hero-media{position:relative;overflow:hidden;background:var(--crema-d)}
+.hero-media img.principal{width:100%;height:100%;object-fit:cover;filter:brightness(.88) saturate(.9)}
+.hero-media img.flotante{position:absolute;bottom:36px;right:-18px;width:185px;height:245px;object-fit:cover;border-radius:3px;border:5px solid var(--blanco);box-shadow:0 20px 56px rgba(26,50,90,.18)}
+.hero-media-velo{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,50,90,.06),transparent 55%)}
+.hero-texto{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px 56px;background:var(--blanco)}
+.hero-titulo{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,4.8vw,5rem);font-weight:500;line-height:1.05;letter-spacing:-.02em;color:var(--carbon);margin-bottom:30px}
+.hero-titulo em{font-style:italic;color:var(--terra)}
+.hero-cuerpo{font-size:1rem;line-height:1.84;color:var(--gris);margin-bottom:44px;max-width:375px}
+.hero-btns{display:flex;flex-direction:column;gap:14px;margin-bottom:52px}
+.hero-data{display:flex;gap:36px;padding-top:32px;border-top:1px solid var(--linea)}
+.hero-data-item .l{font-size:.63rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gris)}
+.hero-data-item .v{font-size:.9rem;font-weight:600;color:var(--carbon);margin-top:5px}
 
 /* ── SECCIONES ── */
-.s { padding: 112px 52px; }
-.s-crema  { background: var(--crema); }
-.s-crema-d { background: var(--crema-d); }
-.s-blanco { background: var(--blanco); }
-.s-indigo { background: var(--indigo); }
-.s-terra  { background: var(--terra); }
+.s{padding:112px 52px}
+.s-crema{background:var(--crema)}
+.s-crema-d{background:var(--crema-d)}
+.s-blanco{background:var(--blanco)}
+.s-indigo{background:var(--indigo)}
+.s-terra{background:var(--terra)}
+.s-indigo .tag{color:var(--paja)}
+.s-indigo .titulo{color:var(--crema)}
 
-/* ── REALIDAD (indigo) ── */
-.s-indigo .tag { color: var(--paja); }
-.s-indigo .titulo { color: var(--crema); }
+/* ── PENSAMIENTOS ── */
+.pensamientos{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border:1px solid rgba(255,255,255,.07);border-radius:6px;overflow:hidden;background:rgba(255,255,255,.05)}
+.pensamiento{padding:40px 36px 44px;background:rgba(255,255,255,.02);border-right:1px solid rgba(255,255,255,.06);transition:background .25s;position:relative}
+.pensamiento:nth-child(even){border-right:none}
+.pensamiento:nth-child(3),.pensamiento:nth-child(4){border-top:1px solid rgba(255,255,255,.06)}
+.pensamiento:hover{background:rgba(255,255,255,.05)}
+.pensamiento::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--terra);transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+.pensamiento:hover::before{transform:scaleY(1)}
+.pensamiento-voz{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;font-weight:400;color:var(--crema);line-height:1.55;margin-bottom:16px}
+.pensamiento-eco{font-size:.88rem;line-height:1.76;color:rgba(237,233,223,.42)}
+.pensamiento-ico{margin-bottom:20px;display:block}
 
-/* Pensamientos */
-.pensamientos {
-  display: grid; grid-template-columns: repeat(2,1fr);
-  gap: 2px; border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 6px; overflow: hidden;
-  background: rgba(255,255,255,0.05);
-}
-.pensamiento {
-  padding: 40px 36px 44px;
-  background: rgba(255,255,255,0.02);
-  border-right: 1px solid rgba(255,255,255,0.06);
-  transition: background .25s; position: relative;
-}
-.pensamiento:last-child { border-right: none; }
-.pensamiento:nth-child(4),
-.pensamiento:nth-child(5),
-.pensamiento:nth-child(6) { border-top: 1px solid rgba(255,255,255,0.06); }
-.pensamiento:hover { background: rgba(255,255,255,0.05); }
-.pensamiento::before {
-  content: ''; position: absolute; top: 0; left: 0; bottom: 0;
-  width: 2px; background: var(--terra);
-  transform: scaleY(0); transform-origin: top; transition: transform .3s ease;
-}
-.pensamiento:hover::before { transform: scaleY(1); }
-.pensamiento-comilla {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4rem; line-height: 0.6;
-  color: var(--paja); opacity: 0.22;
-  margin-bottom: 20px; display: block; user-select: none;
-}
-.pensamiento-voz {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.22rem; font-style: italic; font-weight: 400;
-  color: var(--crema); line-height: 1.5; margin-bottom: 16px;
-}
-.pensamiento-eco { font-size: 0.8rem; line-height: 1.72; color: rgba(237,233,223,0.42); }
-
-/* Puente Jesús + Comunidad */
-.puente {
-  margin-top: 80px;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2px; border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 6px; overflow: hidden;
-}
-.puente-jesus { background: var(--terra); padding: 52px 48px; }
-.mini-tag {
-  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: rgba(237,233,223,0.55);
-  margin-bottom: 20px; display: block;
-}
-.puente-jesus h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-  font-weight: 500; line-height: 1.15;
-  color: var(--blanco); margin-bottom: 20px;
-}
-.puente-jesus h3 em { font-style: italic; color: var(--paja); }
-.puente-jesus p { font-size: 0.9rem; line-height: 1.8; color: rgba(250,248,244,0.72); margin-bottom: 20px; }
-.versiculo-box {
-  padding: 20px 22px; background: rgba(0,0,0,0.15);
-  border-radius: 4px; border-left: 2px solid var(--paja);
-}
-.versiculo-box p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem; font-style: italic;
-  color: var(--crema); margin-bottom: 8px; line-height: 1.5;
-}
-.versiculo-box cite {
-  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--paja); font-style: normal;
-}
-.puente-comunidad {
-  background: rgba(255,255,255,0.03); padding: 52px 48px;
-  border-left: 1px solid rgba(255,255,255,0.07);
-  display: flex; flex-direction: column; justify-content: space-between;
-}
-.puente-comunidad h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-  font-weight: 500; line-height: 1.15;
-  color: var(--crema); margin-bottom: 20px;
-}
-.puente-comunidad h3 em { font-style: italic; color: var(--paja); }
-.puente-comunidad > p { font-size: 0.9rem; line-height: 1.8; color: rgba(237,233,223,0.5); margin-bottom: 32px; }
-.voces { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
-.voz {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 14px 16px; background: rgba(255,255,255,0.04);
-  border-radius: 4px; border: 1px solid rgba(255,255,255,0.06);
-}
-.voz-inicial {
-  min-width: 34px; height: 34px; border-radius: 50%;
-  background: var(--indigo-d); border: 1px solid rgba(201,175,128,0.3);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.95rem; font-weight: 600; color: var(--paja);
-}
-.voz-texto {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.92rem; font-style: italic;
-  color: rgba(237,233,223,0.68); line-height: 1.5;
-}
-.puente-ctas { display: flex; flex-direction: column; gap: 12px; }
-.btn-crema {
-  display: inline-flex; align-items: center; justify-content: space-between;
-  background: var(--crema); color: var(--indigo-d);
-  padding: 14px 22px; border-radius: 3px;
-  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.04em;
-  transition: background .2s;
-}
-.btn-crema:hover { background: var(--blanco); }
-.btn-ghost-crema {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.82rem; font-weight: 500;
-  color: rgba(237,233,223,0.5); letter-spacing: 0.03em;
-  transition: color .2s, gap .2s;
-}
-.btn-ghost-crema:hover { color: var(--crema); gap: 14px; }
+/* ── PUENTE ── */
+.puente{margin-top:80px;display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid rgba(255,255,255,.07);border-radius:6px;overflow:hidden}
+.puente-jesus{background:var(--terra);padding:52px 48px}
+.mini-tag{font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(237,233,223,.55);margin-bottom:20px;display:block}
+.puente-jesus h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.15;color:var(--blanco);margin-bottom:20px}
+.puente-jesus h3 em{font-style:italic;color:var(--crema)}
+.puente-jesus p{font-size:.9rem;line-height:1.8;color:rgba(250,248,244,.72);margin-bottom:20px}
+.versiculo-box{padding:20px 22px;background:rgba(0,0,0,.15);border-radius:4px;border-left:2px solid var(--paja)}
+.versiculo-box p{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--crema);margin-bottom:8px;line-height:1.5}
+.versiculo-box cite{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--paja);font-style:normal}
+.puente-comunidad{background:rgba(255,255,255,.03);padding:52px 48px;border-left:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;justify-content:space-between}
+.puente-comunidad h3{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:500;line-height:1.15;color:var(--crema);margin-bottom:20px}
+.puente-comunidad h3 em{font-style:italic;color:var(--paja)}
+.puente-ctas{display:flex;flex-direction:column;gap:12px;margin-top:32px}
 
 /* ── ESPERANZA ── */
-.esp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; }
-.esp-fotos { position: relative; }
-.esp-foto-a { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; }
-.esp-foto-b {
-  position: absolute; bottom: -36px; right: -36px;
-  width: 50%; aspect-ratio: 4/5; object-fit: cover; border-radius: 3px;
-  border: 6px solid var(--blanco);
-  box-shadow: 0 28px 64px rgba(26,50,90,0.14);
-}
-.esp-cita {
-  margin-top: 36px; padding: 26px 28px;
-  background: var(--crema-d); border-radius: 3px;
-  border-left: 3px solid var(--paja);
-}
-.esp-cita p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.28rem; font-style: italic; font-weight: 400;
-  line-height: 1.5; color: var(--indigo);
-}
-.esp-cita cite {
-  display: block; margin-top: 12px;
-  font-size: 0.67rem; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--gris); font-style: normal;
-}
-
-/* ── LO QUE ENCONTRARÁS ── */
-.enc-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 2px; margin-top: 56px;
-  border: 1px solid var(--linea); border-radius: 4px; overflow: hidden;
-  background: var(--linea);
-}
-.enc-card { background: var(--crema); padding: 40px 36px; transition: background .2s; }
-.enc-card:hover { background: var(--crema-d); }
-.enc-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.6rem; font-weight: 400;
-  color: var(--paja); line-height: 1; margin-bottom: 20px;
-}
-.enc-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.45rem; font-weight: 500;
-  color: var(--indigo); margin-bottom: 10px; line-height: 1.2;
-}
-.enc-card p { font-size: 0.85rem; line-height: 1.76; color: var(--gris); }
+.esp-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.esp-fotos{position:relative}
+.esp-foto-a{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px}
+.esp-foto-b{position:absolute;bottom:-36px;right:-36px;width:50%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;border:6px solid var(--blanco);box-shadow:0 28px 64px rgba(26,50,90,.14)}
+.esp-cita{margin-top:36px;padding:26px 28px;background:var(--crema-d);border-radius:3px;border-left:3px solid var(--paja)}
+.esp-cita p{font-family:'Cormorant Garamond',serif;font-size:1.28rem;font-style:italic;font-weight:400;line-height:1.5;color:var(--indigo)}
+.esp-cita cite{display:block;margin-top:12px;font-size:.67rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);font-style:normal}
 
 /* ── PRIMERA VEZ ── */
-.primera-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: start; }
-.primera-foto { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 3px; position: sticky; top: 80px; }
-.primera-lista { margin-top: 44px; }
-.primera-item {
-  display: grid; grid-template-columns: 32px 1fr;
-  gap: 20px; padding: 24px 0;
-  border-bottom: 1px solid var(--linea);
-}
-.primera-item:first-child { border-top: 1px solid var(--linea); }
-.primera-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem; font-weight: 400; color: var(--paja); padding-top: 2px;
-}
-.primera-item h3 { font-size: 0.9rem; font-weight: 600; color: var(--indigo); margin-bottom: 6px; }
-.primera-item p { font-size: 0.83rem; line-height: 1.74; color: var(--gris); }
-.primera-cta { margin-top: 40px; }
+.primera-layout{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start}
+.primera-foto{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px;position:sticky;top:80px}
+.primera-lista{margin-top:44px}
+.primera-item{display:grid;grid-template-columns:32px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--linea)}
+.primera-item:first-child{border-top:1px solid var(--linea)}
+.primera-num{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--paja);padding-top:2px}
+.primera-item h3{font-size:.9rem;font-weight:600;color:var(--indigo);margin-bottom:6px}
+.primera-item p{font-size:.83rem;line-height:1.74;color:var(--gris)}
+.primera-cta{margin-top:40px}
 
 /* ── MENSAJES / BLOG ── */
-.blog-intro {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 48px; align-items: end; margin-bottom: 56px;
-}
-.blog-nota {
-  font-size: 0.78rem; font-weight: 500; color: var(--gris);
-  background: var(--crema); padding: 12px 16px; border-radius: 3px;
-  border-left: 2px solid var(--paja); line-height: 1.65; align-self: end;
-}
-.blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.blog-card-grande {
-  grid-column: 1 / -1;
-  display: grid; grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--linea); border-radius: 4px; overflow: hidden;
-  background: var(--blanco); transition: box-shadow .2s, transform .2s;
-}
-.blog-card-grande:hover { box-shadow: 0 16px 48px rgba(26,50,90,0.08); transform: translateY(-2px); }
-.blog-card-grande .blog-img { height: 320px; object-fit: cover; width: 100%; }
-.blog-card-grande .blog-body {
-  padding: 40px 36px;
-  display: flex; flex-direction: column; justify-content: center; gap: 14px;
-}
-.blog-serie {
-  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--terra);
-}
-.blog-card-grande .blog-titulo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.9rem; font-weight: 500; line-height: 1.15; color: var(--indigo);
-}
-.blog-card-grande .blog-extracto { font-size: 0.88rem; line-height: 1.76; color: var(--gris); }
-.blog-card-grande .blog-leer {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.8rem; font-weight: 600; color: var(--terra);
-  transition: gap .2s; margin-top: 8px;
-}
-.blog-card-grande .blog-leer:hover { gap: 14px; }
-.blog-card {
-  border: 1px solid var(--linea); border-radius: 4px; overflow: hidden;
-  background: var(--blanco); transition: box-shadow .2s, transform .2s;
-}
-.blog-card:hover { box-shadow: 0 12px 36px rgba(26,50,90,0.07); transform: translateY(-2px); }
-.blog-card .blog-img { width: 100%; height: 200px; object-fit: cover; }
-.blog-card .blog-body { padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
-.blog-card .blog-titulo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem; font-weight: 500; line-height: 1.2; color: var(--indigo);
-}
-.blog-card .blog-extracto { font-size: 0.8rem; line-height: 1.65; color: var(--gris); }
-.blog-card .blog-leer {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.76rem; font-weight: 600; color: var(--terra); transition: gap .2s;
-}
-.blog-card .blog-leer:hover { gap: 12px; }
+.blog-intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.blog-nota{font-size:.78rem;font-weight:500;color:var(--gris);background:var(--crema);padding:12px 16px;border-radius:3px;border-left:2px solid var(--paja);line-height:1.65;align-self:end}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{border:1px solid var(--linea);border-radius:4px;overflow:hidden;background:var(--blanco);transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column}
+.blog-card:hover{box-shadow:0 12px 36px rgba(26,50,90,.07);transform:translateY(-3px)}
+.blog-card .blog-img{width:100%;height:220px;object-fit:cover}
+.blog-card .blog-body{padding:24px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.blog-serie{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--terra)}
+.blog-card .blog-titulo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;line-height:1.2;color:var(--indigo)}
+.blog-card .blog-extracto{font-size:.82rem;line-height:1.7;color:var(--gris);flex:1}
+.blog-card .blog-leer{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:var(--terra);transition:gap .2s;margin-top:4px}
+.blog-card .blog-leer:hover{gap:14px}
 
 /* ── MISIONES ── */
-.s-terra .tag { color: var(--crema-d); }
-.s-terra .titulo { color: var(--blanco); }
-.s-terra .titulo em { color: var(--paja); }
-.misiones-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.misiones-foto { border-radius: 4px; overflow: hidden; height: 500px; }
-.misiones-foto img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88); }
+.s-terra .tag{color:var(--crema-d)}
+.s-terra .titulo{color:var(--blanco)}
+.s-terra .titulo em{color:var(--paja)}
+.misiones-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.misiones-foto{border-radius:4px;overflow:hidden;height:500px}
+.misiones-foto img{width:100%;height:100%;object-fit:cover;filter:brightness(.88)}
 
 /* ── HISTORIA ── */
-.historia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; }
-.historia-foto { border-radius: 4px; overflow: hidden; aspect-ratio: 4/5; }
-.historia-foto img { width: 100%; height: 100%; object-fit: cover; }
-.historia-texto p { font-size: 0.95rem; line-height: 1.88; color: var(--gris); margin-bottom: 20px; }
+.historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.historia-foto{border-radius:4px;overflow:hidden;aspect-ratio:4/5}
+.historia-foto img{width:100%;height:100%;object-fit:cover}
+.historia-texto p{font-size:.95rem;line-height:1.88;color:var(--gris);margin-bottom:20px}
 
 /* ── EVENTOS ── */
-.eventos-lista { margin-top: 52px; }
-.evento {
-  display: grid; grid-template-columns: 72px 1fr auto;
-  gap: 28px; align-items: center;
-  padding: 28px 0; border-bottom: 1px solid var(--linea);
-  transition: background .2s;
-}
-.evento:first-child { border-top: 1px solid var(--linea); }
-.evento-fecha { text-align: center; }
-.evento-fecha .dia {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.8rem; font-weight: 400; line-height: 1; color: var(--indigo);
-}
-.evento-fecha .mes {
-  font-size: 0.62rem; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris);
-}
-.evento-info h3 { font-size: 0.94rem; font-weight: 600; color: var(--indigo); margin-bottom: 4px; }
-.evento-info p { font-size: 0.82rem; color: var(--gris); }
-.evento-badge {
-  font-size: 0.64rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--terra); border: 1px solid var(--terra);
-  padding: 5px 14px; border-radius: 100px; white-space: nowrap;
-}
+.eventos-lista{margin-top:52px}
+.evento{display:grid;grid-template-columns:72px 1fr auto;gap:28px;align-items:center;padding:28px 0;border-bottom:1px solid var(--linea)}
+.evento:first-child{border-top:1px solid var(--linea)}
+.evento-fecha{text-align:center}
+.evento-fecha .dia{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:400;line-height:1;color:var(--indigo)}
+.evento-fecha .mes{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.evento-info h3{font-size:.94rem;font-weight:600;color:var(--indigo);margin-bottom:4px}
+.evento-info p{font-size:.82rem;color:var(--gris)}
+.evento-badge{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);border:1px solid var(--terra);padding:5px 14px;border-radius:100px;white-space:nowrap}
 
-/* ── CTA PAJA ── */
-.cta-central { background: var(--paja); padding: 120px 52px; text-align: center; }
-.cta-central .titulo { color: var(--indigo); max-width: 580px; margin: 0 auto 20px; }
-.cta-central .titulo em { color: var(--terra); }
-.cta-central .cuerpo { margin: 0 auto 52px; max-width: 420px; color: rgba(26,50,90,0.65); }
-.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.btn-indigo-s {
-  background: var(--indigo); color: var(--crema);
-  padding: 15px 32px; border-radius: 3px;
-  font-size: 0.84rem; font-weight: 600; letter-spacing: 0.04em;
-  transition: background .2s;
-}
-.btn-indigo-s:hover { background: var(--indigo-d); }
-.btn-borde-indigo {
-  background: transparent; color: var(--indigo);
-  padding: 15px 32px; border-radius: 3px;
-  font-size: 0.84rem; font-weight: 600; letter-spacing: 0.04em;
-  border: 1.5px solid var(--indigo); transition: background .2s;
-}
-.btn-borde-indigo:hover { background: rgba(26,50,90,0.08); }
+/* ── CTA ── */
+.cta-central{background:var(--paja);padding:120px 52px;text-align:center}
+.cta-central .titulo{color:var(--indigo);max-width:580px;margin:0 auto 20px}
+.cta-central .titulo em{color:var(--terra)}
+.cta-central .cuerpo{margin:0 auto 52px;max-width:420px;color:rgba(26,50,90,.65)}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
 
 /* ── CONTACTO ── */
-.contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 56px; align-items: start; }
-.s-indigo .titulo { color: var(--crema); }
-.contacto-datos { display: flex; flex-direction: column; gap: 24px; }
-.dato-row { display: flex; gap: 16px; align-items: flex-start; }
-.dato-row .ico { font-size: 1rem; margin-top: 3px; opacity: 0.45; }
-.dato-row strong {
-  display: block; font-size: 0.66rem; font-weight: 600;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--paja); margin-bottom: 4px;
-}
-.dato-row span, .dato-row a { font-size: 0.92rem; color: rgba(237,233,223,0.8); }
-.dato-row a:hover { color: var(--paja); }
-.mapa { margin-top: 32px; height: 260px; border-radius: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); }
-.formulario { background: var(--crema); border-radius: 4px; padding: 36px; }
-.formulario h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem; font-weight: 500; color: var(--indigo); margin-bottom: 6px;
-}
-.formulario .sub { font-size: 0.83rem; color: var(--gris); margin-bottom: 28px; line-height: 1.65; }
-.campo { margin-bottom: 14px; }
-.campo input, .campo textarea {
-  width: 100%; padding: 13px 16px;
-  background: var(--blanco); border: 1px solid var(--linea); border-radius: 3px;
-  font-family: 'Inter', sans-serif; font-size: 0.875rem; color: var(--carbon);
-  outline: none; transition: border-color .2s;
-}
-.campo input:focus, .campo textarea:focus { border-color: var(--terra); }
-.campo textarea { resize: none; height: 96px; }
-.campo-submit {
-  width: 100%; background: var(--terra); color: var(--blanco);
-  border: none; border-radius: 3px; padding: 14px;
-  font-family: 'Inter', sans-serif; font-size: 0.84rem;
-  font-weight: 600; letter-spacing: 0.04em; cursor: pointer; transition: background .2s;
-}
-.campo-submit:hover { background: #7A3824; }
+.contacto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:56px;align-items:start}
+.s-indigo .titulo{color:var(--crema)}
+.contacto-datos{display:flex;flex-direction:column;gap:24px}
+.dato-row{display:flex;gap:16px;align-items:flex-start}
+.dato-row .ico{font-size:1rem;margin-top:3px;opacity:.45;display:flex;align-items:center}
+.dato-row strong{display:block;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--paja);margin-bottom:4px}
+.dato-row span,.dato-row a{font-size:.92rem;color:rgba(237,233,223,.8)}
+.dato-row a:hover{color:var(--paja)}
+.mapa{margin-top:32px;height:260px;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.formulario{background:var(--crema);border-radius:4px;padding:36px}
+.formulario h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--indigo);margin-bottom:6px}
+.formulario .sub{font-size:.83rem;color:var(--gris);margin-bottom:28px;line-height:1.65}
+.campo{margin-bottom:14px}
+.campo input,.campo textarea,.campo select{width:100%;padding:13px 16px;background:var(--blanco);border:1px solid var(--linea);border-radius:3px;font-family:'Inter',sans-serif;font-size:.875rem;color:var(--carbon);outline:none;transition:border-color .2s;appearance:none}
+.campo input:focus,.campo textarea:focus,.campo select:focus{border-color:var(--terra)}
+.campo textarea{resize:none;height:96px}
+.campo-submit{width:100%;background:var(--terra);color:var(--blanco);border:none;border-radius:3px;padding:14px;font-family:'Inter',sans-serif;font-size:.84rem;font-weight:600;letter-spacing:.04em;cursor:pointer}
 
 /* ── FOOTER ── */
-footer { background: var(--indigo-d); padding: 64px 52px 36px; }
-.footer-grid {
-  max-width: 1080px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 48px; padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-.footer-marca .logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem; font-weight: 600; letter-spacing: 0.07em;
-  color: var(--crema); display: block; margin-bottom: 14px;
-}
-.footer-marca p { font-size: 0.78rem; line-height: 1.8; color: rgba(237,233,223,0.3); }
-.footer-col h4 {
-  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--paja); margin-bottom: 18px;
-}
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col a { font-size: 0.78rem; color: rgba(237,233,223,0.3); transition: color .2s; }
-.footer-col a:hover { color: var(--crema); }
-.footer-base {
-  max-width: 1080px; margin: 28px auto 0;
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-}
-.footer-base p { font-size: 0.72rem; color: rgba(237,233,223,0.18); }
+footer{background:var(--indigo-d);padding:64px 52px 36px}
+.footer-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.07)}
+.footer-marca .logo{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:.07em;color:var(--crema);display:block;margin-bottom:14px}
+.footer-marca p{font-size:.78rem;line-height:1.8;color:rgba(237,233,223,.3)}
+.footer-col h4{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--paja);margin-bottom:18px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:.78rem;color:rgba(237,233,223,.3);transition:color .2s}
+.footer-col a:hover{color:var(--crema)}
+.footer-base{max-width:1080px;margin:28px auto 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-base p{font-size:.72rem;color:rgba(237,233,223,.18)}
 
 /* ── WA FLOTANTE ── */
-.wa {
-  position: fixed; bottom: 28px; right: 28px; z-index: 200;
-  width: 52px; height: 52px; border-radius: 50%;
-  background: #25D366; color: #fff;
-  display: flex; align-items: center; justify-content: center; font-size: 1.35rem;
-  box-shadow: 0 8px 28px rgba(37,211,102,0.3); transition: transform .2s;
-}
-.wa:hover { transform: scale(1.08); }
+.wa{position:fixed;bottom:28px;right:28px;z-index:200;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.35rem;box-shadow:0 8px 28px rgba(37,211,102,.3);transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.wa:hover{transform:scale(1.12)}
+
+/* Icono Waze SVG inline */
+.waze-icon{width:18px;height:18px;vertical-align:middle}
 
 /* ── RESPONSIVE ── */
-@media (max-width: 980px) {
-  .nav { padding: 0 24px; }
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: flex; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-media { height: 62vw; min-height: 300px; }
-  .hero-media img.flotante { display: none; }
-  .hero-texto { padding: 48px 28px 56px; }
-  .hero-titulo { font-size: 2.8rem; }
-  .s { padding: 80px 24px; }
-  .cta-central { padding: 80px 24px; }
-  /* Pensamientos en responsivo: 2 columnas con tarjetas más compactas */
-  .pensamientos { grid-template-columns: 1fr 1fr; }
-  .pensamiento {
-    padding: 28px 24px 32px;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-  .pensamiento:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.06) !important; }
-  .pensamiento:nth-child(4),
-  .pensamiento:nth-child(5),
-  .pensamiento:nth-child(6) { border-top: none; }
-  .pensamiento-comilla { font-size: 3rem; margin-bottom: 14px; }
-  .pensamiento-voz { font-size: 1.05rem; }
-  .puente { grid-template-columns: 1fr; }
-  .puente-comunidad { border-left: none; border-top: 1px solid rgba(255,255,255,0.07); }
-  .blog-intro { grid-template-columns: 1fr; gap: 20px; }
-  .blog-card-grande { grid-template-columns: 1fr; }
-  .blog-card-grande .blog-img { height: 240px; }
-  .esp-grid, .primera-layout, .misiones-grid, .historia-grid, .contacto-grid { grid-template-columns: 1fr; gap: 48px; }
-  .esp-foto-b { display: none; }
-  .esp-foto-a { aspect-ratio: 3/2; }
-  .enc-grid { grid-template-columns: 1fr; }
-  .primera-foto { aspect-ratio: 3/2; position: static; }
-  .misiones-foto { height: 300px; }
-  .historia-foto { aspect-ratio: 3/2; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-  .evento { grid-template-columns: 60px 1fr; }
-  .evento-badge { display: none; }
-  .hero-data { gap: 24px; flex-wrap: wrap; }
+@media(max-width:980px){
+  .nav{padding:0 24px}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .hero{grid-template-columns:1fr}
+  .hero-media{height:62vw;min-height:300px}
+  .hero-media img.flotante{display:none}
+  .hero-texto{padding:48px 28px 56px}
+  .hero-titulo{font-size:2.8rem}
+  .s{padding:80px 24px}
+  .cta-central{padding:80px 24px}
+  .pensamientos{grid-template-columns:1fr 1fr}
+  .pensamiento{padding:28px 24px 32px;border-right:none!important;border-bottom:1px solid rgba(255,255,255,.06)}
+  .pensamiento:nth-child(odd){border-right:1px solid rgba(255,255,255,.06)!important}
+  .pensamiento:nth-child(3),.pensamiento:nth-child(4){border-top:none}
+  .puente{grid-template-columns:1fr}
+  .puente-comunidad{border-left:none;border-top:1px solid rgba(255,255,255,.07)}
+  .blog-intro{grid-template-columns:1fr;gap:20px}
+  .blog-grid{grid-template-columns:1fr}
+  .esp-grid,.primera-layout,.misiones-grid,.historia-grid,.contacto-grid{grid-template-columns:1fr;gap:48px}
+  .esp-foto-b{display:none}
+  .esp-foto-a{aspect-ratio:3/2}
+  .primera-foto{aspect-ratio:3/2;position:static}
+  .misiones-foto{height:300px}
+  .historia-foto{aspect-ratio:3/2}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .evento{grid-template-columns:60px 1fr}
+  .evento-badge{display:none}
+  .hero-data{gap:24px;flex-wrap:wrap}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-indigo-s,.btn-borde-indigo{min-width:240px;width:100%;max-width:320px}
 }
-
-@media (max-width: 600px) {
-  /* Pensamientos en móvil: 1 columna con diseño horizontal compacto */
-  .pensamientos { grid-template-columns: 1fr; gap: 0; }
-  .pensamiento {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 16px;
-    padding: 20px 20px;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
-    border-top: none !important;
-    align-items: start;
-  }
-  .pensamiento::before { width: 100%; height: 2px; bottom: auto; right: 0; transform: scaleX(0); transform-origin: left; }
-  .pensamiento:hover::before { transform: scaleX(1); }
-  .pensamiento-comilla {
-    font-size: 2.4rem;
-    line-height: 1;
-    margin-bottom: 0;
-    grid-row: 1;
-    grid-column: 1;
-    opacity: 0.3;
-    padding-top: 2px;
-  }
-  .pensamiento-voz {
-    font-size: 0.97rem;
-    grid-row: 1;
-    grid-column: 2;
-    margin-bottom: 8px;
-  }
-  .pensamiento-eco {
-    font-size: 0.75rem;
-    grid-row: 2;
-    grid-column: 2;
-    line-height: 1.6;
-  }
-  .footer-grid, .enc-grid, .blog-grid { grid-template-columns: 1fr; }
-  .blog-card-grande { grid-column: auto; }
-  .cta-btns { flex-direction: column; align-items: center; }
-  .hero-titulo { font-size: 2.4rem; }
-  .titulo { font-size: 2rem; }
-  .puente-jesus, .puente-comunidad { padding: 36px 24px; }
-  .hero-data { gap: 20px; }
-  .hero-data-item .v { font-size: 0.82rem; }
+@media(max-width:600px){
+  .pensamientos{grid-template-columns:1fr;gap:0}
+  .pensamiento{padding:24px 20px;border-right:none!important;border-bottom:1px solid rgba(255,255,255,.08)!important;border-top:none!important}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-titulo{font-size:2.4rem}
+  .titulo{font-size:2rem}
+  .puente-jesus,.puente-comunidad{padding:36px 24px}
+  .hero-data{gap:20px}
+  .hero-data-item .v{font-size:.82rem}
+  .blog-grid{grid-template-columns:1fr}
+}
+@media(min-width:601px) and (max-width:980px){
+  .blog-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 
+<!-- SVG sprites -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="wa-icon" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+  </symbol>
+</svg>
+
 <!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="#inicio" class="nav-logo">
+<nav class="nav" id="nav" aria-label="Navegación principal">
+  <a href="#inicio" class="nav-logo" aria-label="CCNI inicio">
     <span class="n1">CCNI</span>
     <span class="n2">Centro Cristiano Nueva Imagen</span>
   </a>
@@ -729,58 +328,48 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     <li><a href="#visitanos">Visítanos</a></li>
   </ul>
   <div class="nav-right">
-    <a href="https://wa.me/523315999639" class="nav-wa" target="_blank" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></a>
+    <a href="https://wa.me/523315999639" class="nav-wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" fill="#fff"><use href="#wa-icon"/></svg></a>
     <a href="#primera" class="nav-cta">Planear mi visita</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Menú">
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#primera" onclick="closeMobileMenu()">Primera vez</a>
   <a href="#historia" onclick="closeMobileMenu()">Quiénes somos</a>
   <a href="#mensajes" onclick="closeMobileMenu()">Mensajes</a>
   <a href="#misiones" onclick="closeMobileMenu()">Misiones</a>
   <a href="#visitanos" onclick="closeMobileMenu()">Visítanos</a>
-  <a href="https://wa.me/523315999639" target="_blank" onclick="closeMobileMenu()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> WhatsApp</a>
+  <a href="https://wa.me/523315999639" target="_blank" rel="noopener" onclick="closeMobileMenu()"><svg width="16" height="16" fill="currentColor" style="margin-right:6px;vertical-align:middle"><use href="#wa-icon"/></svg>WhatsApp</a>
   <a href="#primera" class="mobile-cta" onclick="closeMobileMenu()">Planear mi primera visita →</a>
 </div>
 
 <!-- HERO -->
-<section id="inicio" class="hero">
+<section id="inicio" class="hero" aria-label="Bienvenida">
   <div class="hero-media">
-    <img class="principal"
-      src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1000&q=85"
-      alt="Comunidad CCNI Zapopan"/>
-    <img class="flotante"
-      src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=80"
-      alt="Conversación auténtica"/>
+    <img class="principal" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1000&q=80" alt="Comunidad CCNI Zapopan — iglesia cristiana" loading="eager" fetchpriority="high" width="1000" height="667"/>
+    <img class="flotante" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&q=75" alt="Personas en comunidad" loading="lazy" width="400" height="533"/>
     <div class="hero-media-velo"></div>
   </div>
   <div class="hero-texto">
-    <h1 class="hero-titulo">
-      En Jesús hay<br>una <em>mejor forma</em><br>de vivir.
-    </h1>
-    <p class="hero-cuerpo">
-      Como tú, somos personas con dudas, errores, miedos e inseguridades, 
-      pero creemos que seguir a Jesús es la mejor decisión que alguien puede tomar. 
-      Acompáñanos y descúbrelo tú mismo.
-    </p>
+    <h1 class="hero-titulo">En Jesús hay<br>una <em>mejor forma</em><br>de vivir.</h1>
+    <p class="hero-cuerpo">Como tú, somos personas con dudas, errores, miedos e inseguridades, pero creemos que seguir a Jesús es la mejor decisión que alguien puede tomar. Acompáñanos y descúbrelo tú mismo.</p>
     <div class="hero-btns">
       <a href="#primera" class="btn-indigo">Planear mi primera visita →</a>
-      <a href="https://wa.me/523315999639" class="btn-texto" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> Hablar con alguien</a>
+      <a href="https://wa.me/523315999639" class="btn-texto" target="_blank" rel="noopener"><svg width="18" height="18" fill="currentColor"><use href="#wa-icon"/></svg> Hablar con alguien</a>
     </div>
     <div class="hero-data">
-      <div class="hero-data-item"><div class="l">Cuándo</div><div class="v">Domingos · 11:30 AM</div></div>
+      <div class="hero-data-item"><div class="l">Cuándo</div><div class="v">Domingos · 11:00 AM</div></div>
       <div class="hero-data-item">
         <div class="l">Dónde</div>
         <div class="v" style="display:flex;flex-direction:column;gap:6px">
           <span>C. Ameca 1768, Benito Juárez, Zapopan</span>
-          <div style="display:flex;gap:10px;margin-top:2px">
-            <a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" style="font-size:0.68rem;font-weight:600;letter-spacing:0.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px">📍 Google Maps</a>
-            <a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" style="font-size:0.68rem;font-weight:600;letter-spacing:0.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px">🗺 Waze</a>
+          <div style="display:flex;gap:12px;margin-top:2px;flex-wrap:wrap">
+            <a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" rel="noopener" style="font-size:.68rem;font-weight:600;letter-spacing:.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px">📍 Google Maps</a>
+            <a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" rel="noopener" style="font-size:.68rem;font-weight:600;letter-spacing:.06em;color:var(--terra);display:inline-flex;align-items:center;gap:4px"><svg class="waze-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 4C16.536 4 4 16.536 4 32c0 8.16 3.456 15.52 9.024 20.736L11.2 58.4a1.6 1.6 0 002.08 1.952l7.04-2.816A27.84 27.84 0 0032 60c15.464 0 28-12.536 28-28S47.464 4 32 4z" fill="#33CCFF" opacity=".2"/><path d="M32 8C18.745 8 8 18.745 8 32c0 7.28 3.08 13.84 8.016 18.496l-1.6 5.44a1.2 1.2 0 001.552 1.472l5.92-2.368A23.84 23.84 0 0032 56c13.255 0 24-10.745 24-24S45.255 8 32 8z" fill="#33CCFF"/><circle cx="24" cy="30" r="3" fill="#1A325A"/><circle cx="40" cy="30" r="3" fill="#1A325A"/><path d="M24 40c2.4 3.2 13.6 3.2 16 0" stroke="#1A325A" stroke-width="2.5" stroke-linecap="round"/><path d="M44 20c2-4 6-3 6 0s-3 5-6 4" stroke="#1A325A" stroke-width="2" stroke-linecap="round"/></svg> Waze</a>
           </div>
         </div>
       </div>
@@ -789,24 +378,51 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
 </section>
 
 <!-- REALIDAD -->
-<section class="s s-indigo">
+<section class="s s-indigo" aria-label="¿Te identificas?">
   <div class="container">
     <div class="tag">¿Te suena familiar?</div>
-    <h2 class="titulo">¿Qué describe mejor lo que estás<br><em style="color:var(--paja)">viviendo y sintiendo hoy en tu vida?</em></h2>
-
-    <div class="pensamientos">
-      <div class="pensamiento"><p class="pensamiento-voz">"Hay días en que pienso que sería mejor no estar aquí. Que todos estarían mejor sin mí."</p><p class="pensamiento-eco">Ese pensamiento existe, y si lo has tenido, necesitas saber que no estás solo y que hay salida.</p></div>
-      <div class="pensamiento"><p class="pensamiento-voz">"A veces no quiero llegar a casa. En lugar de descansar, es un problema más que enfrentar."</p><p class="pensamiento-eco">El hogar que debería ser descanso se convierte en otro problema más que cargar.</p></div>
-      <div class="pensamiento"><p class="pensamiento-voz">"Por fuera sigo adelante, pero por dentro siento que algo falta y no sé ni qué es."</p><p class="pensamiento-eco">Puedes tener trabajo, dinero, familia, rutina... y aun así sentir que la vida no tiene sentido.</p></div>
-      <div class="pensamiento"><p class="pensamiento-voz">"Sé que mi adicción me daña a mí y a los que quiero. Ya lo intenté dejar, pero solo no puedo."</p><p class="pensamiento-eco">No es falta de voluntad, es que hay cargas que nadie fue hecho para cargar solo.</p></div>
+    <h2 class="titulo">¿Alguna de estas frases describe<br><em style="color:var(--paja)">lo que estás viviendo o sintiendo?</em></h2>
+    <div class="pensamientos" role="list">
+      <div class="pensamiento" role="listitem">
+        <div class="pensamiento-ico">
+          <!-- Nube con tormenta y relámpago -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 18 Q8 11 15 11 Q16 7 22 7 Q29 7 30 12 Q35 13 35 18 Q35 23 30 23 L10 23 Q6 23 6 19 Q6 17 8 18Z" fill="rgba(201,175,128,0.1)" stroke="#C9AF80" stroke-width="1.4" stroke-linejoin="round"/><path d="M20 23 L17 31 L21 31 L18 38" stroke="#C9AF80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="25" x2="10" y2="30" stroke="#C9AF80" stroke-width="1.3" stroke-linecap="round" opacity=".5"/><line x1="28" y1="25" x2="26" y2="30" stroke="#C9AF80" stroke-width="1.3" stroke-linecap="round" opacity=".5"/></svg>
+        </div>
+        <p class="pensamiento-voz">"Hay días en que pienso que sería mejor no estar aquí. Que todos estarían mejor sin mí."</p>
+        <p class="pensamiento-eco">Ese pensamiento existe. Y si lo has tenido, necesitas saber que no estás solo y que hay salida.</p>
+      </div>
+      <div class="pensamiento" role="listitem">
+        <div class="pensamiento-ico">
+          <!-- Corazón roto -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M20 34 C20 34 4 23 4 13 C4 8 8 4 13 4 C16 4 18 6 20 9" stroke="#C9AF80" stroke-width="1.6" stroke-linecap="round"/><path d="M20 34 C20 34 36 23 36 13 C36 8 32 4 27 4 C24 4 22 6 20 9" stroke="#C9AF80" stroke-width="1.6" stroke-linecap="round" opacity=".65"/><path d="M20 9 L18 17 L22 22 L19 28 L20 34" stroke="#C9AF80" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 1.5"/></svg>
+        </div>
+        <p class="pensamiento-voz">"A veces no quiero llegar a casa. En lugar de descansar, es un problema más que enfrentar."</p>
+        <p class="pensamiento-eco">El hogar que debería ser descanso se convierte en otro problema más que cargar.</p>
+      </div>
+      <div class="pensamiento" role="listitem">
+        <div class="pensamiento-ico">
+          <!-- Agujero en el piso -->
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="24" rx="14" ry="6" stroke="#C9AF80" stroke-width="1.5" fill="rgba(17,31,58,0.9)"/><ellipse cx="20" cy="24" rx="9" ry="3.5" stroke="#C9AF80" stroke-width="1.1" opacity=".45" fill="rgba(17,31,58,1)"/><ellipse cx="20" cy="24" rx="4" ry="1.5" stroke="#C9AF80" stroke-width="1" opacity=".2"/><path d="M6 24 Q6 30 20 30 Q34 30 34 24" stroke="#C9AF80" stroke-width="1.3" fill="none" opacity=".3"/><path d="M6 22 L12 23" stroke="#C9AF80" stroke-width="1" stroke-linecap="round" opacity=".4"/><path d="M34 22 L28 23" stroke="#C9AF80" stroke-width="1" stroke-linecap="round" opacity=".4"/><path d="M14 18 L16 21" stroke="#C9AF80" stroke-width="1" stroke-linecap="round" opacity=".35"/><path d="M26 18 L24 21" stroke="#C9AF80" stroke-width="1" stroke-linecap="round" opacity=".35"/><path d="M20 16 L20 19" stroke="#C9AF80" stroke-width="1" stroke-linecap="round" opacity=".4"/></svg>
+        </div>
+        <p class="pensamiento-voz">"Por fuera sigo adelante, pero por dentro siento que algo falta y no sé ni qué es."</p>
+        <p class="pensamiento-eco">Puedes tener trabajo, dinero, familia, rutina... y aun así sentir que la vida no tiene sentido.</p>
+      </div>
+      <div class="pensamiento" role="listitem">
+        <div class="pensamiento-ico">
+          <!-- Cadenas estilo emoji -->
+          <svg width="40" height="40" viewBox="0 0 72 72" fill="none"><rect x="8" y="14" width="22" height="14" rx="7" fill="none" stroke="#C9AF80" stroke-width="4"/><rect x="42" y="14" width="22" height="14" rx="7" fill="none" stroke="#C9AF80" stroke-width="4"/><rect x="28" y="17" width="16" height="8" rx="4" fill="none" stroke="#C9AF80" stroke-width="3.5"/><rect x="8" y="44" width="22" height="14" rx="7" fill="none" stroke="#C9AF80" stroke-width="4"/><rect x="42" y="44" width="22" height="14" rx="7" fill="none" stroke="#C9AF80" stroke-width="4"/><rect x="28" y="47" width="16" height="8" rx="4" fill="none" stroke="#C9AF80" stroke-width="3.5"/></svg>
+        </div>
+        <p class="pensamiento-voz">"Sé que mi adicción me daña a mí y a los que quiero. Ya lo intenté dejar, pero solo no puedo."</p>
+        <p class="pensamiento-eco">No es falta de voluntad — hay cargas que nadie fue hecho para cargar solo.</p>
+      </div>
     </div>
 
     <div class="puente">
       <div class="puente-jesus">
         <span class="mini-tag">La respuesta</span>
-        <h3 style="font-size:3rem"><em>Jesús</em></h3>
-        <p style="color:rgba(250,248,244,0.72); font-size:0.9rem; line-height:1.8">No importa lo que estás cargando, la familia rota, la adicción, el vacío, los pensamientos oscuros. Jesús no te pide que lo tengas todo resuelto para acercarte, te recibe tal como estás y donde estás.</p>
-        <p style="color:rgba(250,248,244,0.72); font-size:0.9rem; line-height:1.8">Solo Él tiene el poder de cambiar lo que tú solo no has podido cambiar. Te invitamos a tener un verdadero encuentro con Él</p>
+        <h3 style="font-size:3rem;margin-bottom:24px"><em>Jesús.</em></h3>
+        <p>No importa lo que estás cargando — la familia rota, la adicción, el vacío, los pensamientos oscuros. Jesús no te pide que lo tengas todo resuelto para acercarte. Te recibe tal como estás y donde estás.</p>
+        <p>Solo Él tiene el poder de cambiar lo que tú solo no has podido cambiar. Te invitamos a tener un verdadero encuentro con Él.</p>
         <div class="versiculo-box">
           <p>"Vengan a mí todos los que están cansados y cargados, y yo los haré descansar."</p>
           <cite>— Mateo 11:28</cite>
@@ -816,16 +432,13 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
         <div>
           <span class="mini-tag">La comunidad</span>
           <h3>La iglesia son las personas,<br><em>no las paredes del templo.</em></h3>
-          <div>
-          <p style="color:rgba(237,233,223,0.7); line-height:1.8; margin-bottom:20px">La iglesia somos nosotros, personas reales, con historias y problemas reales, aprendiendo juntos a seguir a Jesús.</p>
-          <p style="color:rgba(237,233,223,0.7); line-height:1.8">Aquí encontrarás personas que entienden que los momentos difíciles de la vida se llevan mejor en comunidad.</p>
-          </div>
-          <p style="margin-top:28px; font-size:1.4rem; font-family:'Cormorant Garamond', serif; font-style:italic; color:var(--paja)">Una iglesia que inspira a las personas a seguir a Jesús.</p>
-          </div>
+          <p style="color:rgba(237,233,223,.7);font-size:.9rem;line-height:1.8;margin-bottom:20px">La iglesia somos nosotros, personas reales, con historias y problemas reales, aprendiendo juntos a seguir a Jesús.</p>
+          <p style="color:rgba(237,233,223,.7);font-size:.9rem;line-height:1.8;margin-bottom:28px">Aquí encontrarás personas que entienden que los momentos difíciles de la vida se llevan mejor en comunidad.</p>
+          <p style="font-size:1.4rem;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--paja)">Una iglesia que inspira a las personas a seguir a Jesús.</p>
         </div>
         <div class="puente-ctas">
           <a href="#primera" class="btn-crema">Planear mi primera visita →</a>
-          <a href="https://wa.me/523315999639" class="btn-ghost-crema" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> Hablar con alguien primero →</a>
+          <a href="https://wa.me/523315999639" class="btn-ghost-crema" target="_blank" rel="noopener"><svg width="16" height="16" fill="currentColor" style="flex-shrink:0"><use href="#wa-icon"/></svg> Hablar con alguien primero →</a>
         </div>
       </div>
     </div>
@@ -833,12 +446,12 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
 </section>
 
 <!-- ESPERANZA -->
-<section class="s s-blanco">
+<section class="s s-blanco" aria-label="Jesús como respuesta">
   <div class="container">
     <div class="esp-grid">
       <div class="esp-fotos">
-        <img class="esp-foto-a" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&q=80" alt="Comunidad auténtica"/>
-        <img class="esp-foto-b" src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&q=80" alt="Acompañamiento real"/>
+        <img class="esp-foto-a" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=700&q=75" alt="Comunidad CCNI Zapopan" loading="lazy" width="700" height="933"/>
+        <img class="esp-foto-b" src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=400&q=75" alt="Personas en iglesia Zapopan" loading="lazy" width="400" height="500"/>
       </div>
       <div>
         <div class="tag">Jesús como respuesta</div>
@@ -854,41 +467,26 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
   </div>
 </section>
 
-<!-- LO QUE ENCONTRARÁS -->
-<section class="s s-crema">
-  <div class="container">
-    <div class="tag">Lo que encontrarás aquí</div>
-    <h2 class="titulo">Esto es lo que<br><em>hay en este lugar.</em></h2>
-    <p class="cuerpo">No hacemos promesas vacías. Solo te contamos lo que personas reales han encontrado al venir.</p>
-    <div class="enc-grid">
-      <div class="enc-card"><div class="enc-num">01</div><h3>Un lugar donde llegas como eres</h3><p>La puerta está abierta para cualquier persona, en cualquier punto de su vida. Sin códigos de entrada ni etiquetas.</p></div>
-      <div class="enc-card"><div class="enc-num">02</div><h3>Un mensaje para tu vida real</h3><p>Cada domingo hablamos de cosas concretas: familia, ansiedad, dinero, propósito. En lenguaje de todos los días.</p></div>
-      <div class="enc-card"><div class="enc-num">03</div><h3>Personas que caminan contigo</h3><p>Una comunidad que no es perfecta pero que se acompaña. Gente real que entiende lo que es cargar algo difícil.</p></div>
-      <div class="enc-card"><div class="enc-num">04</div><h3>Esperanza que transforma</h3><p>No ofrecemos respuestas fáciles. Ofrecemos a Jesús — y la experiencia de que Él cambia lo que nosotros solos no podemos.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- PRIMERA VEZ -->
-<section class="s s-blanco" id="primera">
+<section class="s s-crema" id="primera" aria-label="Tu primera visita">
   <div class="container">
     <div class="primera-layout">
       <div>
-        <img class="primera-foto" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&q=80" alt="Primera visita CCNI"/>
+        <img class="primera-foto" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&q=75" alt="Primera visita iglesia CCNI Zapopan" loading="lazy" width="700" height="933"/>
       </div>
       <div>
         <div class="tag">Tu primera visita</div>
         <h2 class="titulo">Ven y<br><em>conoce.</em></h2>
-        <p class="cuerpo">Una reunión dominical en el CCNI es un espacio abierto, cálido y sin complicaciones.</p>
+        <p class="cuerpo">Una reunión dominical en el CCNI es un espacio abierto, cálido y sin complicaciones. Domingos 11:00 AM en C. Ameca 1768, Benito Juárez, Zapopan.</p>
         <div class="primera-lista">
-          <div class="primera-item"><div class="primera-num">01</div><div><h3>Llegas como estás</h3><p>La reunión es para cualquier persona, en cualquier momento de su vida.</p></div></div>
+          <div class="primera-item"><div class="primera-num">01</div><div><h3>Llegas como estás</h3><p>La reunión es para cualquier persona, en cualquier momento de su vida. Sin requisitos.</p></div></div>
           <div class="primera-item"><div class="primera-num">02</div><div><h3>Una hora y veinte de tu tiempo</h3><p>Música en vivo, un mensaje práctico sobre la vida real, y tiempo para conectar.</p></div></div>
-          <div class="primera-item"><div class="primera-num">03</div><div><h3>El mensaje es para cualquiera</h3><p>No se necesita experiencia religiosa ni conocer la Biblia. Hablamos de vida.</p></div></div>
+          <div class="primera-item"><div class="primera-num">03</div><div><h3>El mensaje es para cualquiera</h3><p>No se necesita experiencia religiosa ni conocer la Biblia. Hablamos de vida real.</p></div></div>
           <div class="primera-item"><div class="primera-num">04</div><div><h3>Los niños también tienen su espacio</h3><p>Hay un programa especial para niños al mismo tiempo que la reunión de adultos.</p></div></div>
           <div class="primera-item"><div class="primera-num">05</div><div><h3>Tú decides el siguiente paso</h3><p>Puedes venir, conocer y decidir lo que quieras. La decisión siempre es tuya.</p></div></div>
         </div>
         <div class="primera-cta">
-          <a href="https://wa.me/523315999639" class="btn-terra" target="_blank" style="max-width:260px">Tengo una pregunta &nbsp;<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></a>
+          <a href="https://wa.me/523315999639" class="btn-terra" target="_blank" rel="noopener">Tengo una pregunta &nbsp;<svg width="18" height="18" fill="currentColor"><use href="#wa-icon"/></svg></a>
         </div>
       </div>
     </div>
@@ -896,7 +494,7 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
 </section>
 
 <!-- MENSAJES / BLOG -->
-<section class="s s-crema-d" id="mensajes">
+<section class="s s-crema-d" id="mensajes" aria-label="Mensajes y reflexiones">
   <div class="container">
     <div class="blog-intro">
       <div>
@@ -904,14 +502,11 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
         <h2 class="titulo">Conversaciones sobre<br><em>lo que de verdad importa.</em></h2>
         <p class="cuerpo">Sin lenguaje teológico complicado. Reflexiones prácticas sobre la vida real — para cualquier persona, en cualquier momento.</p>
       </div>
-      <div class="blog-nota">
-        📖 Por ahora compartimos reflexiones y devocionales escritos. Pronto encontrarás también los mensajes en video de cada domingo.
-      </div>
+      <div class="blog-nota">📖 Por ahora compartimos reflexiones y devocionales escritos. Pronto encontrarás también los mensajes en video de cada domingo.</div>
     </div>
-
     <div class="blog-grid">
-      <div class="blog-card-grande">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=700&q=80" alt="Cuando el miedo te paraliza"/>
+      <div class="blog-card">
+        <img class="blog-img" src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&q=75" alt="Cuando el miedo te paraliza" loading="lazy" width="600" height="400"/>
         <div class="blog-body">
           <span class="blog-serie">Ansiedad & Fe</span>
           <h3 class="blog-titulo">Cuando el miedo te paraliza</h3>
@@ -920,7 +515,7 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
         </div>
       </div>
       <div class="blog-card">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=600&q=80" alt="Amor que no lastima"/>
+        <img class="blog-img" src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=600&q=75" alt="Amor que no lastima" loading="lazy" width="600" height="400"/>
         <div class="blog-body">
           <span class="blog-serie">Familia</span>
           <h3 class="blog-titulo">Amor que no lastima</h3>
@@ -929,7 +524,7 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
         </div>
       </div>
       <div class="blog-card">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" alt="Para qué estoy aquí"/>
+        <img class="blog-img" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75" alt="Para qué estoy aquí" loading="lazy" width="600" height="400"/>
         <div class="blog-body">
           <span class="blog-serie">Propósito</span>
           <h3 class="blog-titulo">¿Para qué estoy aquí?</h3>
@@ -938,36 +533,35 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
         </div>
       </div>
     </div>
-
     <div style="text-align:center;margin-top:44px">
-      <a href="#" class="btn-indigo" style="display:inline-flex;max-width:none;width:auto">Ver todas las reflexiones →</a>
+      <a href="#" class="btn-indigo" style="display:inline-flex;width:auto">Ver todas las reflexiones →</a>
     </div>
   </div>
 </section>
 
 <!-- MISIONES -->
-<section class="s s-terra" id="misiones">
+<section class="s s-terra" id="misiones" aria-label="Misiones">
   <div class="container">
     <div class="misiones-grid">
       <div>
         <div class="tag">Misiones</div>
         <h2 class="titulo">La fe que no sirve<br><em>no sirve de nada.</em></h2>
-        <p class="cuerpo" style="color:rgba(237,233,223,0.7); max-width:440px">Seguir a Jesús significa salir. Llevamos esperanza más allá de nuestros muros — a colonias, familias y personas que más lo necesitan. No para presumir. Porque ese es el Jesús que seguimos.</p>
-        <a href="#visitanos" class="btn-indigo" style="margin-top:36px; max-width:220px">Quiero participar →</a>
+        <p class="cuerpo" style="color:rgba(237,233,223,.7);max-width:440px">Seguir a Jesús significa salir. Llevamos esperanza más allá de nuestros muros — a colonias, familias y personas que más lo necesitan. No para presumir. Porque ese es el Jesús que seguimos.</p>
+        <a href="#visitanos" class="btn-indigo" style="margin-top:36px">Quiero participar →</a>
       </div>
       <div class="misiones-foto">
-        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=700&q=80" alt="Misiones CCNI"/>
+        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=700&q=75" alt="Misiones CCNI Zapopan" loading="lazy" width="700" height="467"/>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HISTORIA -->
-<section class="s s-blanco" id="historia">
+<section class="s s-blanco" id="historia" aria-label="Nuestra historia">
   <div class="container">
     <div class="historia-grid">
       <div class="historia-foto">
-        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=700&q=80" alt="Historia CCNI"/>
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=700&q=75" alt="Historia iglesia cristiana Zapopan CCNI" loading="lazy" width="700" height="875"/>
       </div>
       <div>
         <div class="tag">Nuestra historia</div>
@@ -983,12 +577,12 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
 </section>
 
 <!-- EVENTOS -->
-<section class="s s-crema" id="eventos">
+<section class="s s-crema" id="eventos" aria-label="Próximas reuniones">
   <div class="container">
     <div class="tag">Próximas reuniones</div>
     <h2 class="titulo">¿Cuándo <em>nos ves?</em></h2>
     <div class="eventos-lista">
-      <div class="evento"><div class="evento-fecha"><div class="dia">18</div><div class="mes">May</div></div><div class="evento-info"><h3>Reunión Dominical</h3><p>Música, mensaje práctico y comunidad · Domingos 10:00 AM</p></div><span class="evento-badge">Semanal</span></div>
+      <div class="evento"><div class="evento-fecha"><div class="dia">18</div><div class="mes">May</div></div><div class="evento-info"><h3>Reunión Dominical</h3><p>Música, mensaje práctico y comunidad · Domingos 11:00 AM</p></div><span class="evento-badge">Semanal</span></div>
       <div class="evento"><div class="evento-fecha"><div class="dia">22</div><div class="mes">May</div></div><div class="evento-info"><h3>Reunión de Jóvenes</h3><p>Para los de 18 a 30 · Jueves 7:00 PM</p></div><span class="evento-badge">Jóvenes</span></div>
       <div class="evento"><div class="evento-fecha"><div class="dia">01</div><div class="mes">Jun</div></div><div class="evento-info"><h3>Noche de Mujeres</h3><p>Un espacio especial para ellas · Sábado 5:00 PM</p></div><span class="evento-badge">Mujeres</span></div>
       <div class="evento"><div class="evento-fecha"><div class="dia">08</div><div class="mes">Jun</div></div><div class="evento-info"><h3>Reunión de Hombres</h3><p>Conversaciones honestas sobre lo que importa · Sábado 8:00 AM</p></div><span class="evento-badge">Hombres</span></div>
@@ -997,44 +591,59 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
 </section>
 
 <!-- CTA -->
-<section class="cta-central">
+<section class="cta-central" aria-label="Da un paso">
   <div class="container">
     <h2 class="titulo">Da un paso.<br><em>Solo uno.</em></h2>
     <p class="cuerpo">La puerta está abierta para cualquier persona, en cualquier momento. Ven y conoce. El resto puede esperar.</p>
     <div class="cta-btns">
       <a href="#primera" class="btn-indigo-s">Planear mi visita</a>
-      <a href="https://wa.me/523315999639" class="btn-borde-indigo" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg> Hablar con alguien</a>
+      <a href="https://wa.me/523315999639" class="btn-borde-indigo" target="_blank" rel="noopener"><svg width="16" height="16" fill="currentColor"><use href="#wa-icon"/></svg> Hablar con alguien</a>
     </div>
   </div>
 </section>
 
 <!-- CONTACTO -->
-<section class="s s-indigo" id="visitanos">
+<section class="s s-indigo" id="visitanos" aria-label="Visítanos">
   <div class="container">
     <div class="tag">Visítanos</div>
     <h2 class="titulo">Aquí estamos.</h2>
     <div class="contacto-grid">
       <div>
         <div class="contacto-datos">
-          <div class="dato-row"><span class="ico">📍</span><div><strong>Dirección</strong><span>C. Ameca 1768, Benito Juárez, 45199 Zapopan, Jal.</span><div style="display:flex;gap:12px;margin-top:8px"><a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" style="font-size:0.72rem;font-weight:600;color:var(--paja);letter-spacing:0.05em">📍 Google Maps →</a><a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" style="font-size:0.72rem;font-weight:600;color:var(--paja);letter-spacing:0.05em">🗺 Waze →</a></div></div></div>
-          <div class="dato-row"><span class="ico">🕙</span><div><strong>Reunión dominical</strong><span>Domingos · 11:30 AM</span></div></div>
-          <div class="dato-row"><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></span><div><strong>WhatsApp</strong><a href="https://wa.me/523315999639" target="_blank">+52 3315999639</a></div></div>
+          <div class="dato-row">
+            <span class="ico">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <span>C. Ameca 1768, Benito Juárez, 45199 Zapopan, Jal.</span>
+              <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap">
+                <a href="https://www.google.com/maps/place/CENTRO+CRISTIANO+NUEVA+IMAGEN/@20.7322855,-103.3409105,17z" target="_blank" rel="noopener" style="font-size:.72rem;font-weight:600;color:var(--paja);letter-spacing:.05em">📍 Google Maps →</a>
+                <a href="https://waze.com/ul?ll=20.7322855,-103.3383356&navigate=yes" target="_blank" rel="noopener" style="font-size:.72rem;font-weight:600;color:var(--paja);letter-spacing:.05em;display:inline-flex;align-items:center;gap:4px"><svg class="waze-icon" viewBox="0 0 64 64" fill="none"><path d="M32 4C16.536 4 4 16.536 4 32c0 8.16 3.456 15.52 9.024 20.736L11.2 58.4a1.6 1.6 0 002.08 1.952l7.04-2.816A27.84 27.84 0 0032 60c15.464 0 28-12.536 28-28S47.464 4 32 4z" fill="#33CCFF" opacity=".2"/><path d="M32 8C18.745 8 8 18.745 8 32c0 7.28 3.08 13.84 8.016 18.496l-1.6 5.44a1.2 1.2 0 001.552 1.472l5.92-2.368A23.84 23.84 0 0032 56c13.255 0 24-10.745 24-24S45.255 8 32 8z" fill="#33CCFF"/><circle cx="24" cy="30" r="3" fill="#1A325A"/><circle cx="40" cy="30" r="3" fill="#1A325A"/><path d="M24 40c2.4 3.2 13.6 3.2 16 0" stroke="#1A325A" stroke-width="2.5" stroke-linecap="round"/><path d="M44 20c2-4 6-3 6 0s-3 5-6 4" stroke="#1A325A" stroke-width="2" stroke-linecap="round"/></svg> Waze →</a>
+              </div>
+            </div>
+          </div>
+          <div class="dato-row"><span class="ico">🕙</span><div><strong>Reunión dominical</strong><span>Domingos · 11:00 AM</span></div></div>
+          <div class="dato-row"><span class="ico"><svg width="18" height="18" fill="rgba(237,233,223,.8)"><use href="#wa-icon"/></svg></span><div><strong>WhatsApp</strong><a href="https://wa.me/523315999639" target="_blank" rel="noopener">+52 33 1599-9639</a></div></div>
         </div>
         <div class="mapa">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.2!2d-103.3383356!3d20.7322855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b100182b9645%3A0xa88aefb08e865055!2sCENTRO%20CRISTIANO%20NUEVA%20IMAGEN!5e0!3m2!1ses!2smx!4v1"
-            width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.2!2d-103.3383356!3d20.7322855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b100182b9645%3A0xa88aefb08e865055!2sCENTRO%20CRISTIANO%20NUEVA%20IMAGEN!5e0!3m2!1ses!2smx!4v1" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa CCNI Zapopan"></iframe>
         </div>
       </div>
-      <div class="formulario">
-        <h3>¿Tienes una pregunta?</h3>
-        <p class="sub">Escríbenos. Con gusto te contestamos y te ayudamos a planear tu visita.</p>
-        <div class="campo"><input type="text" placeholder="Tu nombre" autocomplete="name"></div>
-        <div class="campo"><input type="tel" placeholder="Tu WhatsApp" autocomplete="tel"></div>
-        <div class="campo"><textarea placeholder="Tu pregunta o mensaje..."></textarea></div>
-        <button class="campo-submit">Enviar mensaje</button>
+      <div class="formulario" role="form" aria-label="Formulario de contacto">
+        <h3>¿Tienes una pregunta o petición de oración?</h3>
+        <p class="sub">Escríbenos. Con gusto te contestamos, oramos contigo y te ayudamos a planear tu visita.</p>
+        <div class="campo"><input type="text" placeholder="Tu nombre" autocomplete="name" aria-label="Tu nombre"></div>
+        <div class="campo"><input type="tel" placeholder="Tu WhatsApp" autocomplete="tel" aria-label="Tu WhatsApp"></div>
+        <div class="campo">
+          <select aria-label="Tipo de mensaje">
+            <option value="">¿Qué quieres compartir?</option>
+            <option value="pregunta">Tengo una pregunta</option>
+            <option value="oracion">Tengo una petición de oración</option>
+            <option value="visita">Quiero planear mi visita</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="campo"><textarea placeholder="Tu pregunta, mensaje o petición de oración..." aria-label="Tu mensaje"></textarea></div>
+        <button class="campo-submit" type="button">Enviar mensaje</button>
       </div>
     </div>
   </div>
@@ -1049,43 +658,31 @@ footer { background: var(--indigo-d); padding: 64px 52px 36px; }
     </div>
     <div class="footer-col"><h4>Explorar</h4><ul><li><a href="#primera">Primera Vez</a></li><li><a href="#mensajes">Mensajes</a></li><li><a href="#misiones">Misiones</a></li><li><a href="#eventos">Eventos</a></li></ul></div>
     <div class="footer-col"><h4>La iglesia</h4><ul><li><a href="#historia">Nuestra historia</a></li><li><a href="#historia">Qué creemos</a></li><li><a href="#visitanos">Visítanos</a></li></ul></div>
-    <div class="footer-col"><h4>Conecta</h4><ul><li><a href="https://wa.me/523315999639" target="_blank">WhatsApp</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="#">YouTube</a></li></ul></div>
+    <div class="footer-col"><h4>Conecta</h4><ul><li><a href="https://wa.me/523315999639" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
   </div>
   <div class="footer-base">
-    <p>© 2025 Centro Cristiano Nueva Imagen · Zapopan, Jalisco</p>
+    <p>© 2025 Centro Cristiano Nueva Imagen · Zapopan, Jalisco · Iglesia cristiana bautista</p>
     <p>"En Jesús hay una mejor forma de vivir."</p>
   </div>
 </footer>
 
-<a href="https://wa.me/523315999639" class="wa" target="_blank" title="Hablar por WhatsApp" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.571a.75.75 0 00.918.919l5.718-1.47A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.725 9.725 0 01-4.964-1.355l-.355-.212-3.688.948.964-3.67-.23-.366A9.725 9.725 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg></a>
+<a href="https://wa.me/523315999639" class="wa" target="_blank" rel="noopener" title="Hablar por WhatsApp" aria-label="WhatsApp"><svg width="26" height="26" fill="#fff"><use href="#wa-icon"/></svg></a>
 
 <script>
-// Nav scroll shadow
-window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
-});
-
+// Nav scroll
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>10)},{passive:true});
 // Mobile menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-let menuOpen = false;
-
-hamburger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.classList.toggle('open', menuOpen);
+const hamburger=document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobileMenu');
+let menuOpen=false;
+hamburger.addEventListener('click',()=>{
+  menuOpen=!menuOpen;
+  mobileMenu.classList.toggle('open',menuOpen);
+  hamburger.setAttribute('aria-expanded',menuOpen);
+  mobileMenu.setAttribute('aria-hidden',!menuOpen);
 });
-
-function closeMobileMenu() {
-  menuOpen = false;
-  mobileMenu.classList.remove('open');
-}
-
-// Close menu on outside click
-document.addEventListener('click', (e) => {
-  if (menuOpen && !hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
-    closeMobileMenu();
-  }
-});
+function closeMobileMenu(){menuOpen=false;mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false');mobileMenu.setAttribute('aria-hidden','true');}
+document.addEventListener('click',(e)=>{if(menuOpen&&!hamburger.contains(e.target)&&!mobileMenu.contains(e.target))closeMobileMenu();});
 </script>
 </body>
 </html>
